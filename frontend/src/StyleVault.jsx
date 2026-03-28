@@ -106,9 +106,9 @@ export default function StyleVault() {
         setUploadPreview({ loading: false, base64, ...parsed, emoji: UPLOAD_SAMPLES[0].emoji });
         setAddForm({ name: parsed.name || "", cat: parsed.cat || "tops", color: parsed.color || "", notes: "" });
       } } catch {
-  setUploadPreview({ loading: false, base64, dataUrl, name: "", cat: "tops", color: "", tags: [] });
-  setAddForm({ name: "", cat: "tops", color: "", notes: "" });
-}
+        setUploadPreview({ loading: false, base64, dataUrl, name: "", cat: "tops", color: "", tags: [] });
+        setAddForm({ name: "", cat: "tops", color: "", notes: "" });
+        }
     };
     reader.readAsDataURL(file);
   };
